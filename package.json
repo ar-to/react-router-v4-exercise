@@ -13,10 +13,13 @@
   },
   "dependencies": {
     "express": "^4.16.2",
+    "match-sorter": "^2.0.2",
+    "namor": "^1.0.1",
     "path": "^0.12.7",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
+    "react-table": "^6.6.0",
     "reactstrap": "^5.0.0-alpha.3"
   },
   "devDependencies": {

@@ -46,4 +46,17 @@ These sources were used to make this repo:
 
 ## Issues while working
 
-- routes do not work the same way as when serving files via a server. Read [this](https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writting-manually) for more information.  - NOT FIXED!
+- routes do not work the same way as when serving files via a server. Read [this](https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writting-manually) for more information.  - FIXED! : added 'exact' to Route with path='/home'
+
+- Organize routes into separate files under Routes/
+
+- Add Css modules via css loaders in webpack:
+Got a "loader not found error", see [this](https://github.com/react-boilerplate/react-boilerplate/issues/1648) issue for details.
+
+Also need the following loaders
+  - [style](https://webpack.js.org/loaders/style-loader/)
+  - [file](https://webpack.js.org/loaders/file-loader/)
+  - [url](https://webpack.js.org/loaders/url-loader/)
+  - 
+
+- remove react-table components and dependancies after fix or leave?

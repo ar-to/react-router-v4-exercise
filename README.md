@@ -1,7 +1,7 @@
 # react-router-v4-exercise
 A n exercise using and setting up react router v4
 
-https://travis-ci.org/ar-to/react-router-v4-exercise.svg?branch=master
+[![Build Status](https://travis-ci.org/ar-to/react-router-v4-exercise.svg?branch=master)](https://travis-ci.org/ar-to/react-router-v4-exercise)
 
 NOTE: see [Issues](#issues-while-working) for most current progress
 

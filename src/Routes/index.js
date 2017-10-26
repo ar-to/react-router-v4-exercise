@@ -1,16 +1,54 @@
 import React from 'react';
 
 import {
-  BrowserRouter as Router,
-  Switch
+  Switch,
   Route,
   Link,
 } from 'react-router-dom';
 
-import Home from './Home';
+import {
+  Button
+} from 'reactstrap';
+
+import Home from '../Components/Home';
+import DataGrid from '../Components/DataGrid';
+
+const About = (props) => {
+  console.log(props)
+  return (
+    <div>
+      <h2>About {props.match.path}</h2>
+      <Button 
+      onClick={() => { props.history.push('/about/tim')}}>Tim</Button>
+      <Button 
+      color='default'
+      onClick={() => { props.history.push('/')}}>Home</Button>
+    </div>
+  );
+}
+
+const Contact = () => {
+  return <h2>Contact</h2>;
+}
+
+const Name = (props) => {
+  console.log(props)
+  return (
+    <div>
+      <h2>Name: {props.match.params.id}</h2>
+      <Link to='/'>Back</Link>
+    </div>
+  )
+}
 
 export default () => {
-  <Router>
-    <Route path="/" component={Home}/>
-  </Router>
+  return (
+    <Switch>
+      <Route exact path="/" component={Home}/>
+      <Route exact path="/about" component={About}/>
+      <Route path="/about/:id" component={Name}/>
+      <Route path="/contact" component={Contact}/>
+      <Route path="/data-grid" component={DataGrid}/>
+    </Switch>
+  )
 }

@@ -16,9 +16,12 @@ module.exports = {
          filename: 'js/app.bundle.js'
      },
     module: {
-      loaders: [
+      rules: [
         { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-        { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
+        { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
+        { test: /\.css$/, use: [ {loader: 'style-loader'}, {loader:'css-loader'} ] },
+        { test: /\.(png|jpg|gif)$/, use: [ { loader: 'file-loader' }]},
+        { test: /\.(png|jpg|gif)$/, use: [ { loader: 'url-loader', options: { limit: 10000 } }]}
       ]
     },
     devServer: {

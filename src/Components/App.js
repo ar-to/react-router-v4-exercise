@@ -1,42 +1,33 @@
 import React from 'react';
 
 import {
-    Switch,
-    Route,
     Link
 } from 'react-router-dom';
 
 import {
     Container,
     Row,
-    Col
+    Col,
 } from 'reactstrap';
 
-import Home from '../Routes/Home';
-import DataGrid from './DataGrid';
-
+import RouterList from '../Routes';
 
 const Header = () => {
-    return <h2>Header</h2>;
-}
-
-const About = () => {
-    return <h2>About</h2>;
-}
-
-const Contact = () => {
-    return <h2>Contact</h2>;
+    return (
+        <div>
+          <h2>Header</h2>
+          <Link to='/'>Home</Link>
+          <Link to='/about'>About</Link>
+          <Link to='/about/:name'>About:name</Link>
+          <Link to='/data-grid'>Data-Grid</Link>
+        </div>
+    );
 }
 
 const Main = () => {
     return (
         <main>
-            <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route path="/about" component={About}/>
-                <Route path="/contact" component={Contact}/>
-                <Route path="/data-grid" component={DataGrid}/>
-            </Switch>
+            <RouterList />
         </main>
     );
 }

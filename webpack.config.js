@@ -25,7 +25,7 @@ module.exports = {
       ]
     },
     devServer: {
-      contentBase: './public/dist',
+      contentBase: './src',
       historyApiFallback: true
     },
     plugins: [HtmlWebpackPluginConfig]

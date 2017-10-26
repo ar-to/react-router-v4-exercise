@@ -12,6 +12,7 @@ import {
 
 import Home from '../Components/Home';
 import DataGrid from '../Components/DataGrid';
+import Profile from '../Components/Profile';
 
 const About = (props) => {
   console.log(props)
@@ -45,10 +46,12 @@ export default () => {
   return (
     <Switch>
       <Route exact path="/" component={Home}/>
-      <Route exact path="/about" component={About}/>
+      <Route path="/about" component={About}/>
       <Route path="/about/:id" component={Name}/>
       <Route path="/contact" component={Contact}/>
       <Route path="/data-grid" component={DataGrid}/>
+      <Route path="/profile" component={Profile}/>
+      {/* <Route path="/profile/:view" component={Profile}/> */}
     </Switch>
   )
 }

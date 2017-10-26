@@ -50,6 +50,12 @@ These sources were used to make this repo:
 
 - Add Css modules via css loaders in webpack to fix css imports - FIXED!
 
+- Routes do not work when manually adding path `/profile/1` but works form link. Tested it in create-react-app and it works so it may be something to do with webpack.
+
 - Get sidebar links to render views inside the view component via routes
 
 - Organize routes into separate files under Routes/
+
+## Features to Add
+
+- Use dummy api, set state, then populate /profile/:view to be able to see multiple types

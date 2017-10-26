@@ -20,6 +20,7 @@ const Header = () => {
           <Link to='/about'>About</Link>
           <Link to='/about/:name'>About:name</Link>
           <Link to='/data-grid'>Data-Grid</Link>
+          <Link to='/profile'>Profile</Link>
         </div>
     );
 }

@@ -6,17 +6,10 @@ import {
   Link
 } from 'react-router-dom';
 
-const View1 = () => {
-  return <h3>View1</h3>;
-}
-
 export default () => {
   return (
     <div>
-      <Link to='/view1'>View1</Link>
-      {/* <Switch>
-        <Route path='/view1' component={View1}></Route>
-      </Switch> */}
+      <Link to='/profile/view1'>View1</Link>
     </div>
   )
 }

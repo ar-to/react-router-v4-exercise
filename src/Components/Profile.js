@@ -26,19 +26,45 @@ const Sidebar = () => {
     )
   }
   
-  const Views = () => {
+  const Views = (props) => {
+    // console.log(props);
     return (
         <div>
             <h4>Views</h4>
             <Switch>
-                <Route path='/profile/:view' component={View1}></Route>
+                <Route path='/profile/:view' component={View}></Route>
+                <Route component={Default}></Route>
             </Switch>
         </div>
     )
   }
+
+  //controls what is rendered per view
+  const View = (props) => {
+    let view = props.match.params.view;
+    console.log(props);
+    return (
+      <Container>
+        {
+          (() => {
+          switch(view) {
+            case "view1":
+              return <View1 />
+              break;
+            default:
+              return <p>View: {view}</p>
+          }
+        })()
+        }
+      </Container>
+    )
+  }
+
+  const Default = () => {
+    return <h3>Dafault</h3>;
+  }
   
   const View1 = (props) => {
-      console.log(props);
     return (
       <div>
         <h4>view: {props.match.params.view}</h4>

@@ -51,7 +51,6 @@ export default () => {
       <Route path="/contact" component={Contact}/>
       <Route path="/data-grid" component={DataGrid}/>
       <Route path="/profile" component={Profile}/>
-      {/* <Route path="/profile/:view" component={Profile}/> */}
     </Switch>
   )
 }

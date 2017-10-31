@@ -11,6 +11,7 @@ import {
 } from 'reactstrap';
 
 import RouterList from '../Routes';
+import DropdownTest from './Dropdown';
 
 const Header = () => {
     return (
@@ -21,6 +22,7 @@ const Header = () => {
           <Link to='/about/:name'>About:name</Link>
           <Link to='/data-grid'>Data-Grid</Link>
           <Link to='/profile'>Profile</Link>
+          <DropdownTest />
         </div>
     );
 }

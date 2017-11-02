@@ -13,6 +13,7 @@ import {
 import Home from '../Components/Home';
 import DataGrid from '../Components/DataGrid';
 import Profile from '../Components/Profile';
+import Forms from '../Components/Views/FormsPage';
 
 const About = (props) => {
   console.log(props)
@@ -51,6 +52,7 @@ export default () => {
       <Route path="/contact" component={Contact}/>
       <Route path="/data-grid" component={DataGrid}/>
       <Route path="/profile" component={Profile}/>
+      <Route path="/forms" component={Forms} />>
     </Switch>
   )
 }

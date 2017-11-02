@@ -18,6 +18,7 @@ import Person from './CustomComponents/PropTypesTest';
 import BreadItem from './CustomComponents/BreadcrumbsItem';
 import Bread from './CustomComponents/Breadcrumbs';
 import IconDropdown from './IconDropdown';
+import TestDropdown from './Dropdown';
 
 const elem = () => {
   return <p>text</p>;
@@ -27,11 +28,12 @@ const Home = (props) => {
   console.log(props);
   return (
       <Container>
+        <i className="material-icons md-48">face</i>
+        <p>Testing</p>
           <MuiThemeProvider>
             <IconDropdown />
           </MuiThemeProvider>
-        <i className="material-icons md-48">face</i>
-        <p>Testing</p>
+          <TestDropdown />
         <Person firstName='Ari' lastName='Guz' />
         <Bread path='/' text='home' active={true} activeText='home' 
         links={ [
